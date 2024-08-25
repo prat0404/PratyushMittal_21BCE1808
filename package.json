@@ -1,0 +1,14 @@
+{
+    "name": "chess-game",
+    "version": "1.0.0",
+    "description": "A turn-based chess-like game with WebSocket support.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server/server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "ws": "^8.7.0"
+    }
+  }
+  
