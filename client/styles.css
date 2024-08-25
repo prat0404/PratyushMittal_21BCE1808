@@ -1,0 +1,109 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background for the entire page */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff; /* White text color */
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 36px;
+    color: #ffffff; /* White text for the heading */
+}
+
+/* Grid container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: repeat(5, 80px);
+    gap: 0;
+    justify-content: center;
+    margin: 20px auto;
+    border: 2px solid black;
+    background-color: #2c2c2c; /* Darker background for the grid */
+}
+
+/* Individual boxes on the chessboard */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    color: #ffffff; /* White text for the pieces */
+}
+
+/* Color the boxes */
+.box:nth-child(odd) {
+    background-color: #3a3a3a; /* Dark grey for odd boxes */
+}
+
+.box:nth-child(even) {
+    background-color: #4a4a4a; /* Slightly lighter grey for even boxes */
+}
+
+/* Highlight selected box */
+.box.selected {
+    border: 2px solid #ff9800; /* Orange border for selected box */
+}
+
+/* Highlight valid moves */
+.box.highlight {
+    background-color: #ffeb3b; /* Yellow highlight for valid moves */
+}
+
+/* Pieces styling */
+.allimg, .allpawn {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+/* Hover effect for boxes */
+.box:hover {
+    background-color: #5a5a5a; /* Darker grey for hover effect */
+}
+
+/* Custom styles for turns */
+.turn-indicator {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff; /* White text for the turn indicator */
+}
+
+/* Instructions Section */
+.instructions {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #2c2c2c; /* Dark background for instructions */
+    border-radius: 8px;
+    color: #ffffff; /* White text */
+    max-width: 500px;
+    text-align: left;
+}
+
+.instructions h2 {
+    font-size: 24px;
+    color: #ffeb3b; /* Yellow heading for instructions */
+    margin-bottom: 10px;
+}
+
+.instructions ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.instructions li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.instructions li strong {
+    color: #ff9800; /* Orange color for piece names */
+}

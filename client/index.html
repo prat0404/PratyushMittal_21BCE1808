@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess-Like Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline CSS for the grid layout */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 80px);
+            grid-template-rows: repeat(5, 80px);
+            gap: 0;
+            justify-content: center;
+            margin: 20px auto;
+            border: 2px solid black;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .box:nth-child(odd) {
+            background-color: #3a3a3a; /* Dark grey for odd boxes */
+        }
+
+        .box:nth-child(even) {
+            background-color: #4a4a4a; /* Slightly lighter grey for even boxes */
+        }
+
+        .box.selected {
+            border: 2px solid #ff9800; /* Orange border for selected box */
+        }
+
+        .box.highlight {
+            background-color: #ffeb3b; /* Yellow highlight for valid moves */
+        }
+
+        .allimg, .allpawn {
+            width: 50px;
+            height: 50px;
+        }
+
+        .turn-indicator {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ffffff; /* White text for the turn indicator */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Chess-Like Game</h1>
+    <div class="container">
+        <!-- 5x5 Grid Setup -->
+        <div id="b01" class="box"></div>
+        <div id="b02" class="box"></div>
+        <div id="b03" class="box"></div>
+        <div id="b04" class="box"></div>
+        <div id="b05" class="box"></div>
+
+        <div id="b11" class="box"></div>
+        <div id="b12" class="box"></div>
+        <div id="b13" class="box"></div>
+        <div id="b14" class="box"></div>
+        <div id="b15" class="box"></div>
+
+        <div id="b21" class="box"></div>
+        <div id="b22" class="box"></div>
+        <div id="b23" class="box"></div>
+        <div id="b24" class="box"></div>
+        <div id="b25" class="box"></div>
+
+        <div id="b31" class="box"></div>
+        <div id="b32" class="box"></div>
+        <div id="b33" class="box"></div>
+        <div id="b34" class="box"></div>
+        <div id="b35" class="box"></div>
+
+        <div id="b41" class="box"></div>
+        <div id="b42" class="box"></div>
+        <div id="b43" class="box"></div>
+        <div id="b44" class="box"></div>
+        <div id="b45" class="box"></div>
+    </div>
+    <div class="turn-indicator">Player A's Turn</div>
+    
+    <!-- Movement Guide -->
+    <div class="instructions">
+        <h2>Piece Movement Guide</h2>
+        <ul>
+            <li><strong>Pawn (P):</strong> Moves 1 step in any direction (⬆️ ⬇️ ⬅️ ➡️)</li>
+            <li><strong>Hero1 (H1):</strong> Moves 2 steps in any direction (⬆️ ⬇️ ⬅️ ➡️)</li>
+            <li><strong>Hero2 (H2):</strong> Moves 2 steps diagonally (↖️ ↗️ ↙️ ↘️)</li>
+            <li><strong>Hero3 (H3):</strong> Moves 2 steps in one direction, then 1 step perpendicular (All directions)</li>
+        </ul>
+    </div>
+
+    <script src="chess.js"></script>
+</body>
+</html>
