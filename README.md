@@ -49,7 +49,10 @@ This project is a chess-inspired game designed with a server-client architecture
    The game will notify you when a player wins.
 
 ## Video
-https://github.com/user-attachments/assets/89c57e4f-91f0-4022-b4da-afec8d78f65c
+
+https://github.com/user-attachments/assets/7161bc88-40c5-4835-a40c-d1dae0455001
+
+
 
 
 ## Dependencies
